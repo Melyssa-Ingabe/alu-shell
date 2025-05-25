@@ -1,9 +1,2 @@
 #!/bin/bash
-# Add execute permission for owner, group, others on all directories in current directory
-
-for entry in */
-do
-  if [ -d "$entry" ]; then
-    chmod a+x "$entry"
-  fi
-done
+find . -type d -exec chmod a+x {} +
